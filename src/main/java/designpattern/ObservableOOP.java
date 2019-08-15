@@ -1,4 +1,4 @@
-package com.guanchazhe;
+package designpattern;
 
 import java.util.Observable;
 import lombok.Data;

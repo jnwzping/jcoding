@@ -1,4 +1,4 @@
-package com.lru;
+package lru;
 
 /**
  * @Author wp

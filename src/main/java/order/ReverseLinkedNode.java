@@ -1,4 +1,4 @@
-package com.order;
+package order;
 
 import lombok.Data;
 
