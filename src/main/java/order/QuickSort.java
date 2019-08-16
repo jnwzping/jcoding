@@ -16,6 +16,12 @@ public class QuickSort {
         }
     }
 
+    /**
+     *
+     * @param arr
+     * @param low
+     * @param high
+     */
     private static void quickSort(int[] arr, int low, int high) {
         if (low < high) {
             // 找寻基准数据的正确索引
