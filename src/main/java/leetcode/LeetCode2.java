@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.HashMap;
+
 /***
  * 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。
  *
@@ -14,6 +16,7 @@ package leetcode;
  * 原因：342 + 465 = 807
  *
  * 1、需要考虑进位场景
+ * 2、需要考虑只有一个节点并进位场景
  */
 public class LeetCode2 {
 
@@ -43,8 +46,16 @@ public class LeetCode2 {
         pre = pre.next;
       }
 
-      ref1 = ref1.next;
-      ref2 = ref2.next;
+      if (ref1 != null) {
+        ref1 = ref1.next;
+      } else {
+        ref1 = null;
+      }
+      if (ref2 != null) {
+        ref2 = ref2.next;
+      } else {
+        ref2 = null;
+      }
     }
     return newNode;
   }

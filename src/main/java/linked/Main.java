@@ -13,5 +13,6 @@ public class Main {
     System.out.println("开始打印链表！");
     NodeUtil.printNode(nodeReverse);
     System.out.println("结束打印链表！");
+
   }
 }
