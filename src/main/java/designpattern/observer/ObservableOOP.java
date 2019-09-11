@@ -1,4 +1,4 @@
-package designpattern;
+package designpattern.observer;
 
 import java.util.Observable;
 import lombok.Data;
