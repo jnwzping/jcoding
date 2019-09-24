@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.HashMap;
-
 /***
  * 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。
  *
@@ -60,6 +58,28 @@ public class LeetCode2 {
     return newNode;
   }
 
+  public static ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
+    ListNode pre = new ListNode(0);
+    ListNode curr = pre;
+    int add = 0;
+    while (l1!=null||l2!=null){
+      int x = l1==null?0:l1.val;
+      int y = l2==null?0:l2.val;
+      int sum = x+y;
+      add = sum/10;
+      curr.next = new ListNode(sum%10);
+      curr = curr.next;
+
+      if(l1!=null)l1=l1.next;
+      if(l2!=null)l2=l2.next;
+      if(add == 1) {
+        curr.next = new ListNode(add);
+      }
+    }
+
+    return pre.next;
+  }
+
   public static void main(String[] args) {
     ListNode n1 = new ListNode(2);
     ListNode n2 = new ListNode(4);
@@ -73,7 +93,7 @@ public class LeetCode2 {
     n4.next = n5;
     n5.next = n6;
 
-    addTwoNumbers(n1, n4);
+    addTwoNumbers2(n1, n4);
 
   }
 }
