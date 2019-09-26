@@ -1,5 +1,10 @@
 package order;
 
+/**
+ * 插入排序
+ * 算法思想：
+ * 把数组分为两个部分，前面已经排序的，后面乱序的，取后面一个乱序插入到前面合适位置，不合适交换一次
+ */
 public class InsertSort {
 
     public void sort(int[] a) {
