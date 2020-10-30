@@ -1,6 +1,5 @@
 package singleton;
 
-import com.sun.xml.internal.ws.developer.Serialization;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -9,7 +8,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.ObjectStreamException;
 
-@Serialization
 public class Test implements java.io.Serializable {
 
   private String name;
