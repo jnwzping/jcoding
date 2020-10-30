@@ -15,6 +15,7 @@ public class string {
     b.intern();
 
     System.out.println(a == b);
+    System.out.println(a == b);
   }
 
 
