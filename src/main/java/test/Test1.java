@@ -1,13 +1,22 @@
 package test;
 
-import java.util.HashMap;
-
 public class Test1 {
-
-    public static void main(String[] args) {
-        Test1 test1 = new Test1();
-        System.out.println(test1.hashCode());
-        System.out.println(System.identityHashCode(test1));
-        System.out.println(System.identityHashCode(test1));
+   public int rep(int[] arr){
+    int x = 0;
+    for(int y=1;y<arr.length;y++){
+      if(arr[x]!=arr[y]){
+          if(x!=0) {
+              arr[x] = arr[y];
+          }
+          x++;
+      }
     }
+    return x;
+   }
+
+  public static void main(String[] args) {
+    int[] x = {1,1,2,2,2,3};
+      new Test1().rep(x);
+      System.out.println("");
+  }
 }
