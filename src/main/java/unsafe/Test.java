@@ -1,19 +1,24 @@
 package unsafe;
 
 import java.lang.reflect.Field;
+
+import agent.HelloWorld;
+import object.Person;
 import sun.misc.Unsafe;
 
 public class Test {
 
-  public static void main(String[] args) {
-    try {
-      Field field = Unsafe.class.getDeclaredField("theUnsafe");
-      field.setAccessible(true);
-      Unsafe unsafe = (Unsafe) field.get(null);
-      unsafe.allocateMemory(100);
-    } catch (NoSuchFieldException | IllegalAccessException e) {
-      e.printStackTrace();
+    public static void main(String[] args) {
+        try {
+            Field field2 = Person.class.getDeclaredField("age");
+            // 一旦这个类实例化后，该属性在内存中的偏移位置
+            long offset2 = UnsafeUtil.unsafe.objectFieldOffset(field2);
+            System.out.println("name offset = " + offset2);
+
+            System.out.println(Integer.MAX_VALUE);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
     }
-  }
 
 }
