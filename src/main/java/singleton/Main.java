@@ -14,7 +14,7 @@ public class Main {
 //    Singleton singleton = Singleton.getInstance();
 
     try {
-      File file = new File("/tmp/object.txt");
+      File file = new File("/tmp/memory.object.txt");
 //      ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(file));
 //      objectOutputStream.writeObject(singleton);
 //      objectOutputStream.flush();

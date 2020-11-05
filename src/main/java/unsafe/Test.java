@@ -2,9 +2,7 @@ package unsafe;
 
 import java.lang.reflect.Field;
 
-import agent.HelloWorld;
-import object.Person;
-import sun.misc.Unsafe;
+import memory.object.Person;
 
 public class Test {
 

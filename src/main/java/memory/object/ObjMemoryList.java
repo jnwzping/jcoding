@@ -1,8 +1,7 @@
-package object;
+package memory.object;
 
 import com.google.common.collect.Lists;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ObjMemoryList {
